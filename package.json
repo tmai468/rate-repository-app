@@ -16,14 +16,19 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-native": "0.64.3",
+    "react-native-paper": "^4.11.2",
     "react-native-web": "0.17.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-react": "^7.16.7",
     "eslint": "^8.10.0",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-native": "^4.0.0"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "react-devtools-core": "4.14.0"
+  }
 }
