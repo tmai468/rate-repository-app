@@ -2,6 +2,8 @@
 // // import { StyleSheet, Text, View } from 'react-native';
 // import { Alert, Text } from 'react-native';
 import Main from './src/components/Main';
+import { NativeRouter } from 'react-router-native'
+import { StatusBar } from 'expo-status-bar';
 // export default function App() {
 //   console.log("testing log")
 //   return (
@@ -25,7 +27,15 @@ import Main from './src/components/Main';
 // }
 
 const App = () => {
-  return <Main />
+  return (
+    <>
+      <NativeRouter>
+        <Main />
+      </NativeRouter>
+
+      <StatusBar style='auto'/>
+    </>
+  )
 }
 
 export default App;

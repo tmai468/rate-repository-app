@@ -4,6 +4,8 @@ import RepositoryList from "./RepositoryList"
 import FlexboxExample from "./FlexboxExample";
 import Text from "./Text";
 import AppBar from "./AppBar";
+import { Navigate, Route, Routes } from "react-router-native";
+import SignIn from "./SignIn";
 
 const styles = StyleSheet.create({
     container: {
@@ -72,7 +74,12 @@ const Main = () => {
         <View style={styles.container}>
             {/* <Text>Rate Repository Application</Text> */}
             <AppBar />
-            <RepositoryList />
+            <Routes>
+                <Route path="/signin" element={<SignIn />}/>
+                <Route path="/" element={<RepositoryList />}/>
+                {/* catch any paths that don't match the previously defined routes. Users will be returned to the home view */}
+                <Route path="*" element={<Navigate to="/" replace />}/>
+            </Routes>
         </View>
     )
 }
